@@ -1,4 +1,6 @@
 // T(n) = 2*T(n/2) + n = O(n*log(n))
+// Pros: stable, O(n * log(n)) in the worst case
+// Cons: worse performance comparing to other
 const mergeSort = (nums: number[]): number[] => {
     if (nums.length <= 1) return nums;
 
@@ -11,7 +13,6 @@ const mergeSort = (nums: number[]): number[] => {
 }
 
 const merge = (left: number[], right: number[]): number[] => {
-    console.log('check', {left, right});
     const sortedArr: number[] = [];
     while (left.length > 0 && right.length > 0) {
         sortedArr.push(left[0] < right[0] ?

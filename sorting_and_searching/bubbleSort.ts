@@ -1,4 +1,6 @@
 // O(n^2)
+// Pros: simple, stable
+// Cons: useless
 const bubbleSort = (n: number[]): number[] => {
     for (let i = 0; i < n.length; i++) {
         for (let j = 1; j < n.length; j++) {

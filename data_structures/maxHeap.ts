@@ -1,43 +1,91 @@
-class MaxHeap {
+export class MaxHeap {
     private readonly heap: number[];
 
-    constructor(nums: number[]) {
-        this.heap = [-1];
-        nums.forEach(item => this.add(item));
+    constructor(list) {
+        this.heap = [-1]
+        list.forEach(item => this.add(item));
     }
 
-    add = (num: number) => {
-        this.heap.push(num);
+    add = (node: number) => {
+        this.heap.push(node);
+        if (this.heap.length == 2) return node;
+        this._heapifyUp();
 
-        return num;
+        return this.heap[1];
     }
 
-    getMax = () => {
-        return this.heap.length == 1 ? null: this.heap[1];
+    remove = () => {
+        if (this.heap.length == 1) return null;
+        if (this.heap.length == 2) return this.heap.pop();
+        const prevRoot = this.heap[1];
+        // bring last val to root
+        this.heap[1] = this.heap.pop();
+        // reorder top to bottom
+        this._heapifyDown();
+
+        return prevRoot;
+    }
+
+    sort() {
+        const sorted = [];
+        let nextVal;
+        while ((nextVal = this.remove()) !== null) {
+            sorted.push(nextVal);
+        }
+        return sorted;
     }
 
     _heapifyUp = () => {
-        let i = 1;
+        let i = this.heap.length - 1;
+        const val = this.heap[i];
+
+        while (! this._isRoot(i) && this._getParentNode(i) < val) {
+            //swap values
+            [this.heap[this._getParentIndex(i)], this.heap[i]] = [this.heap[i], this.heap[this._getParentIndex(i)]];
+            i = this._getParentIndex(i);
+        }
     }
 
     _heapifyDown = () => {
-
+        if (this.heap.length < 3) return;
+        let i = 1;
+        const currentVal = this.heap[1];
+        let leftVal = this._getLeftNode(i);
+        let rightVal = this._getRightNode(i);
+        while (
+            leftVal !== undefined &&
+            (currentVal < leftVal || currentVal < rightVal)
+            ) {
+            if (
+                currentVal < leftVal &&
+                (rightVal === undefined || leftVal > rightVal)
+            ) {
+                // swap
+                [this.heap[this._getLeftIndex(i)], this.heap[i]] = [currentVal, leftVal];
+                i = this._getLeftIndex(i);
+            } else {
+                [this.heap[this._getRightIndex(i)], this.heap[i]] = [
+                    currentVal,
+                    rightVal,
+                ];
+                i = this._getRightIndex(i);
+            }
+            leftVal = this._getLeftNode(i);
+            rightVal = this._getRightNode(i);
+        }
     }
 
-    _isRoot = (i: number): boolean => i == 1
+    _isRoot = (i) => i == 1
 
-    _getParentIndex = (i: number): number => Math.floor(i / 2);
+    _getLeftIndex = (i) => i * 2;
 
-    _getParentNode = (i: number): number => this.heap[this._getParentIndex(i)];
+    _getLeftNode = (i) => this.heap[this._getLeftIndex(i)];
 
-    _getLeftIndex = (i: number): number => i * 2;
+    _getRightIndex = (i) => i * 2 + 1;
 
-    _getLeftNode = (i: number): number => this.heap[this._getLeftIndex(i)];
+    _getRightNode = (i) => this.heap[this._getRightIndex(i)];
 
-    _getRightIndex = (i: number): number => i * 2 + 1
+    _getParentIndex = (i) => Math.floor(i / 2);
 
-    _getRightNode = (i: number): number => this.heap[this._getRightIndex(i)]
-
+    _getParentNode = (i) => this.heap[this._getParentIndex(i)];
 }
-
-const heap = new MaxHeap([1, 2, 3]);

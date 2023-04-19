@@ -1,4 +1,6 @@
 // O(n^2)
+// Pros: simple, O(n) swaps
+// Const: unstable, worse performance comparing to other
 const selectionSort = (n: number[]): number[] => {
     for (let i = 0; i < n.length; i++) {
         let x: number = i;
