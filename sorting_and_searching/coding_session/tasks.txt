@@ -1,0 +1,28 @@
+1. Write a function that takes in an array of distinct integers as well as an integer k and that returns the kth smallest integer in that array.
+The function should do this in linear time, on average.
+
+Sample:
+array = [8, 5, 2, 9, 7, 6, 3]
+k = 3
+Output: 5
+
+
+2.
+Write a function that takes in a sorted array of integers as well as a target
+integer. The function should use a variation of the Binary Search algorithm to
+find a range of indices in between which the target number is contained in the
+array and should return this range in the form of an array.
+
+Write a function that takes in a sorted array of integers as well as a target
+integer. The function should find a range of indices in between which the target number is contained in the
+array and should return this range in the form of an array.
+
+The first number in the output array should represent the first index at which
+the target number is located, while the second number should represent the
+last index at which the target number is located. The function should return
+[-1, -1] if the integer isn't contained in the array.
+
+Sample:
+array = [0, 1, 21, 33, 45, 45, 45, 45, 45, 45, 61, 71, 73]
+target = 45
+output: [4, 9]
