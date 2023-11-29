@@ -5,10 +5,6 @@
 [![standard.js][standard-logo]][standard-js]
 
 </div>
-![AAFuWkQu2jM_M0D9pS_1701263085447](https://github.com/AlexGavrilov939/AlgoExplorer/assets/5443983/efb53a15-7ec3-496c-bc23-dadb83056c9f)
-
-![AAFuWkQu2jM_M0D9pS_1701263085447](https://github.com/AlexGavrilov939/AlgoExplorer/assets/5443983/b31796ef-5d54-4ad5-81a3-02fce0c42c2d)
-
 
 <!-- Front Matter -->
 
@@ -48,7 +44,7 @@ many of the algorithms can be found in the [wiki][explanation].
 
 <!-- Banner Image -->
 
-[banner]: https://user-images.githubusercontent.com/68542775/167072911-dc31eac8-6885-4a05-9c25-279ecce22a79.png
+[banner]: https://github.com/AlexGavrilov939/AlgoExplorer/assets/5443983/efb53a15-7ec3-496c-bc23-dadb83056c9f
 
 <!-- Badge Links -->
 
