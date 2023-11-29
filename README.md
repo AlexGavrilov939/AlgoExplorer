@@ -5,6 +5,7 @@
 [![standard.js][standard-logo]][standard-js]
 
 </div>
+![AAFuWkQu2jM_M0D9pS_1701263085447](https://github.com/AlexGavrilov939/AlgoExplorer/assets/5443983/efb53a15-7ec3-496c-bc23-dadb83056c9f)
 
 <!-- Front Matter -->
 
