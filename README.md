@@ -1,9 +1,9 @@
 <div align="left">
-
+  
 [![Checks][checks]][actions]
 [![Contributions Welcome][welcome]](CONTRIBUTING.md)
 [![standard.js][standard-logo]][standard-js]
-
+  
 </div>
 
 <!-- Front Matter -->
@@ -12,22 +12,19 @@
 
 Best practices, examples, and exercises. All you need to be fit for your next interview.
 
----
-
 <!-- Banner -->
 [![JavaScript Banner][banner]](DIRECTORY.md)
 
----
+***
 
 <!-- Disclaimer -->
+<div align="left">
+These examples are for learning purposes only. For improved performance and security,<br/>
+use specialized implementations of these algorithms and structures.<br/>
+Note: API stability is not guaranteed.
+</div>
 
-<h4 align="left">
-  These examples are for learning purposes only. For improved performance and security,
-  use specialized implementations of these algorithms and structures.
-  Note: API stability is not guaranteed.
-</h4>
-
-
+***
 
 <!-- Body -->
 
@@ -37,10 +34,8 @@ inspiration regarding what to implement. Our maintainers will guide you through 
 if you make any mistakes. The names of the maintainers of this repository are listed in the
 [CODEOWNERS file](.github/CODEOWNERS).
 
-You can find a list of the algorithms currently in the repository in the [directory](DIRECTORY.md). Explanations of
-many of the algorithms can be found in the [wiki][explanation].
-
----
+You can find a list of the algorithms currently in the repository in the [directory](DIRECTORY.md).<br/>
+Explanations of many of the algorithms can be found in the [wiki][explanation].
 
 <!-- Banner Image -->
 
