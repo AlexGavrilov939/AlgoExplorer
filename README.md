@@ -36,6 +36,11 @@ The names of the maintainers of this repository are listed in the [CODEOWNERS fi
 You can find a list of the algorithms currently in the repository in the [directory](DIRECTORY.md).<br/>
 Explanations of many of the algorithms can be found in the [wiki][explanation].
 
+## License & Copyright
+
+The materials herein are all &copy; 2023 Alex Gavrilov.
+
+This work is licensed under a <a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.html#license-text">The GNU General Public License v3.0</a>.
 <!-- Banner Image -->
 
 [banner]: https://github.com/AlexGavrilov939/AlgoExplorer/assets/5443983/efb53a15-7ec3-496c-bc23-dadb83056c9f
