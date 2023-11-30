@@ -10,7 +10,8 @@
 
 # AlgoExplorer - data structures and algorithms in JS/TS. 
 
-Best practices, examples, and exercises. All you need to be fit for your next interview.
+Best practices, examples, and exercises. Everything you need to prepare for the algorithmic section of the interview if you are going to take it at JS/TS.
+Most of the examples and implementations are mainly added in the Typescript language, but you can easily turn it into JS.
 
 <!-- Banner -->
 [![JavaScript Banner][banner]](DIRECTORY.md)
@@ -28,8 +29,8 @@ Note: API stability is not guaranteed.
 
 ## Index of algo topics
 
-* [Asymptotics (Big O notation)](#system-design-topics-start-here)
-* [Data structures](#system-design-topics-start-here)
+* [Asymptotic (Big O notation)](./asymptotics/Asymptotics.md)
+* [Data structures](./data_structures/DataStructures.md)
     * [Fixed size array](#FixedSizeArray)
     * [Dynamic array (vector)](#DynamicArray)
     * [Stack](#Stack)
