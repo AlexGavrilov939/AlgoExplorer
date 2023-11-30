@@ -69,7 +69,7 @@ The materials herein are all &copy; 2023 Alex Gavrilov.
 I am providing code and resources in this repository to you under an open-source license. Because this is my personal repository, the license you receive for my code and resources is from me and not my employer.
 <!-- Banner Image -->
 
-[banner]: https://github.com/AlexGavrilov939/AlgoExplorer/assets/5443983/efb53a15-7ec3-496c-bc23-dadb83056c9f
+[banner]: https://github.com/AlexGavrilov939/AlgoExplorer/assets/5443983/9a385e3a-b494-44a7-917e-9a09677b0b62
 
 <!-- Badge Links -->
 
