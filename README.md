@@ -26,7 +26,32 @@ Note: API stability is not guaranteed.
 
 ***
 
-<!-- Body -->
+## Index of algo topics
+
+* [Asymptotics (Big O notation)](#system-design-topics-start-here)
+* [Data structures](#system-design-topics-start-here)
+    * [Fixed size array](#FixedSizeArray)
+    * [Dynamic array (vector)](#DynamicArray)
+    * [Stack](#Stack)
+    * [Dequeue](#Dequeue)
+    * [Queue](#Queue)
+    * [ArrayList](#ArrayList)
+    * [LinkedList](#LinkedList)
+    * [DoublyLinkedList](#DoublyLinkedList)
+    * [Hash Table](#HashTable)
+    * [Heap](#Heap)
+    * [Binary Search Tree](#BinarySearchTree)
+    * [Practice](#Practice)
+    * [Summary Complexity Table](#SummaryComplexityTable)
+* [Sorting and Searching algorithms](#SortingSearching)
+* [Bitwise algorithms](#Bitwise)
+* [Graphs algorithms](#Graphs)
+* [Strings algorithms](#Graphs)
+* [Greedy algorithms](#Greedy)
+* [Dynamic Programming](#DP)
+
+
+***
 
 Before contributing to this repository, make sure to read our [Contribution Guidelines](CONTRIBUTING.md). You can look
 at the [issues with a "help wanted" label][help-wanted] for inspiration regarding what to implement.
@@ -40,7 +65,7 @@ Explanations of many of the algorithms can be found in the [wiki][explanation].
 
 The materials herein are all &copy; 2023 Alex Gavrilov.
 
-This work is licensed under a <a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.html#license-text">The GNU General Public License v3.0</a>.
+I am providing code and resources in this repository to you under an open-source license. Because this is my personal repository, the license you receive for my code and resources is from me and not my employer.
 <!-- Banner Image -->
 
 [banner]: https://github.com/AlexGavrilov939/AlgoExplorer/assets/5443983/efb53a15-7ec3-496c-bc23-dadb83056c9f
