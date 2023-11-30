@@ -28,7 +28,7 @@ Note: API stability is not guaranteed.
 
 ## Index of algo topics
 
-* [Asymptotics (Big O notation)](#system-design-topics-start-here)
+* [Asymptotics (Big O notation)](./asymptotics/Asymptotics.md)
 * [Data structures](#system-design-topics-start-here)
     * [Fixed size array](#FixedSizeArray)
     * [Dynamic array (vector)](#DynamicArray)
