@@ -1,5 +1,5 @@
 // TC: O(n), SC: O(1)
-function arrayStringsAreEqual(word1: string[], word2: string[]): boolean {
+export function arrayStringsAreEqual(word1: string[], word2: string[]): boolean {
     let w1p: number = 0, w2p: number = 0;
     let s1p: number = 0, s2p: number = 0;
 
@@ -21,7 +21,7 @@ function arrayStringsAreEqual(word1: string[], word2: string[]): boolean {
 }
 
 // TC: O(n), SC: O(n)
-function arrayStringsAreEqualNaive(word1: string[], word2: string[]): boolean {
+export function arrayStringsAreEqualNaive(word1: string[], word2: string[]): boolean {
     const str1 = word1.join('');
     const str2 = word2.join('');
 
