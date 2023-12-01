@@ -44,12 +44,14 @@ Note: API stability is not guaranteed.
     * [Binary Search Tree](#BinarySearchTree)
     * [Practice](#Practice)
     * [Summary Complexity Table](#SummaryComplexityTable)
-* [Sorting and Searching algorithms](#SortingSearching)
-* [Bitwise algorithms](#Bitwise)
-* [Graphs algorithms](#Graphs)
-* [Strings algorithms](#Graphs)
-* [Greedy algorithms](#Greedy)
-* [Dynamic Programming](#DP)
+* [Algorithms & Techniques](#Algorithms)
+    * [Sorting and Searching](#SortingSearching)
+    * [Bitwise](#Bitwise)
+    * [Graphs](#Graphs)
+    * [Strings](#Graphs)
+    * [Greedy](#Greedy)
+    * [Dynamic Programming](#DP)
+* [Leetcode daily problems](#LeetcodeDaily)
 
 
 ***
