@@ -30,7 +30,7 @@ Note: API stability is not guaranteed.
 ## Index of algo topics
 
 * [Asymptotic (Big O notation)](./asymptotics/Asymptotics.md)
-* [Data structures](./data_structures/DataStructures.md)
+* [Data structures](./data_structures/INDEX.md)
     * [Fixed size array](#FixedSizeArray)
     * [Dynamic array (vector)](#DynamicArray)
     * [Stack](#Stack)
@@ -40,7 +40,7 @@ Note: API stability is not guaranteed.
     * [LinkedList](#LinkedList)
     * [DoublyLinkedList](#DoublyLinkedList)
     * [Hash Table](#HashTable)
-    * [Heap](#Heap)
+    * [Heap](./data_structures/heap/INDEX.md)
     * [Binary Search Tree](#BinarySearchTree)
     * [Practice](#Practice)
     * [Summary Complexity Table](#SummaryComplexityTable)
@@ -51,7 +51,7 @@ Note: API stability is not guaranteed.
     * [Strings](#Graphs)
     * [Greedy](#Greedy)
     * [Dynamic Programming](#DP)
-* [LeetCode daily problems](./leetcode_daily/INDEX.md)
+* [LeetCode daily problems](./leetcode_daily/INDEX.md) 
 
 
 ***
