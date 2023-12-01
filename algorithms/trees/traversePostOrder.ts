@@ -1,4 +1,4 @@
-import { TreeNode } from "../data_structures/treeNode";
+import { TreeNode } from "../../data_structures/treeNode";
 
 // Recursive approach T.C: O(n), S.C: O(n)
 function postorderTraversalRecursive(root: TreeNode | null): number[] {

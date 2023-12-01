@@ -51,7 +51,7 @@ Note: API stability is not guaranteed.
     * [Strings](#Graphs)
     * [Greedy](#Greedy)
     * [Dynamic Programming](#DP)
-* [Leetcode daily problems](#LeetcodeDaily)
+* [LeetCode daily problems](./leetcode_daily/INDEX.md)
 
 
 ***
