@@ -6,10 +6,10 @@ const quickSelect = (nums: number[], k: number): number => {
 
   while (true) {
     if (startIdx > endIdx) {
-      console.log("Should never arrive here!");
+      console.log('Should never arrive here!');
       return -1;
     }
-    let pivotIdx: number = startIdx;
+    const pivotIdx: number = startIdx;
     let leftIdx: number = pivotIdx + 1;
     let rightIdx: number = endIdx;
 
@@ -26,7 +26,7 @@ const quickSelect = (nums: number[], k: number): number => {
     }
     [nums[rightIdx], nums[pivotIdx]] = [nums[pivotIdx], nums[rightIdx]];
     if (rightIdx == position) return nums[rightIdx];
-    else if (rightIdx < position) {
+    if (rightIdx < position) {
       startIdx = rightIdx + 1;
     } else {
       endIdx = rightIdx - 1;
@@ -34,4 +34,4 @@ const quickSelect = (nums: number[], k: number): number => {
   }
 };
 
-console.log("quickSelect_result", quickSelect([8, 5, 2, 9, 7, 6, 3], 1));
+console.log('quickSelect_result', quickSelect([8, 5, 2, 9, 7, 6, 3], 1));

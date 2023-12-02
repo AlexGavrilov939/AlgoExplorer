@@ -1,6 +1,7 @@
-import { TreeNode } from "../../data_structures/treeNode";
+import { TreeNode } from '../../data_structures/treeNode';
 
 // Recursive approach T.C: O(n), S.C: O(n)
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function preorderTraversal(root: TreeNode | null): number[] {
   const dfsPreOrder = (node: typeof root, stack: number[] = []): number[] => {
     if (node) {
@@ -16,6 +17,7 @@ function preorderTraversal(root: TreeNode | null): number[] {
 }
 
 // Iterative approach T.C: O(n), S.C: O(n)
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function preorderTraversalIterative(root: TreeNode | null): number[] {
   if (!root) return [];
 
@@ -25,10 +27,10 @@ function preorderTraversalIterative(root: TreeNode | null): number[] {
   while (stack.length > 0) {
     const node = stack.pop();
 
-    traversed.push(node.val);
+    traversed.push(node!.val);
 
-    node.right && stack.push(node.right);
-    node.left && stack.push(node.left);
+    node?.right && stack.push(node.right);
+    node?.left && stack.push(node.left);
   }
 
   return traversed;

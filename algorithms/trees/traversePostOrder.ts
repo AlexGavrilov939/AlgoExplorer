@@ -1,6 +1,7 @@
-import { TreeNode } from "../../data_structures/treeNode";
+import { TreeNode } from '../../data_structures/treeNode';
 
 // Recursive approach T.C: O(n), S.C: O(n)
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function postorderTraversalRecursive(root: TreeNode | null): number[] {
   const dfsPostOrder = (node: typeof root, stack: number[] = []): number[] => {
     if (node) {
@@ -15,6 +16,7 @@ function postorderTraversalRecursive(root: TreeNode | null): number[] {
 }
 
 // Iterative approach T.C: O(n), S.C: O(n)
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function postorderTraversalIterative(root: TreeNode | null): number[] {
   if (!root) return [];
 
@@ -26,12 +28,12 @@ function postorderTraversalIterative(root: TreeNode | null): number[] {
     const node = stackA.pop();
     node?.left && stackA.push(node.left);
     node?.right && stackA.push(node.right);
-    stackB.push(node);
+    stackB.push(node!);
   }
 
   while (stackB.length > 0) {
     const node = stackB.pop();
-    traversed.push(node.val);
+    traversed.push(node!.val);
   }
 
   return traversed;

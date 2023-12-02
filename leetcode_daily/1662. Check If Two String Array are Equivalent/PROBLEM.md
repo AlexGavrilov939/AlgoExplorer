@@ -1,10 +1,14 @@
 # Check If Two String Arrays are Equivalent
+
 ### <span style="color:rgb(0, 184, 163)">Easy</span>
+
 ### Description
+
 Given two string arrays `word1` and `word2`, return `true` if the two arrays represent the same string, and `false` otherwise.
 A string is represented by an array if the array elements concatenated in order forms the string.
 
 #### Example 1
+
 ```plaintext
 Input: word1 = ["ab", "c"], word2 = ["a", "bc"]
 Output: true
@@ -15,18 +19,21 @@ The strings are the same, so return true.
 ```
 
 #### Example 2
+
 ```plaintext
 Input: word1 = ["a", "cb"], word2 = ["ab", "c"]
 Output: false
 ```
 
 #### Example 3
+
 ```plaintext
 Input: word1 = ["abc", "d", "defg"], word2 = ["abcddefg"]
 Output: true
 ```
 
 #### Constraints:
+
 ```plaintext
 1 <= word1.length, word2.length <= 103
 1 <= word1[i].length, word2[i].length <= 103
@@ -35,4 +42,3 @@ word1[i] and word2[i] consist of lowercase letters.
 ```
 
 ### [<span style='color: rgb(44, 187, 93)'>Solution</span>](./solution.ts)
-

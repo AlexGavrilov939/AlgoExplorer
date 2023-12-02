@@ -8,15 +8,16 @@
 
 <!-- Front Matter -->
 
-# AlgoExplorer - data structures and algorithms in JS/TS. 
+# AlgoExplorer - data structures and algorithms in JS/TS.
 
 Best practices, examples, and exercises. Everything you need to prepare for the algorithmic section of the interview if you are going to take it at JS/TS.
 Most of the examples and implementations are mainly added in the Typescript language, but you can easily turn it into JS.
 
 <!-- Banner -->
+
 [![JavaScript Banner][banner]](DIRECTORY.md)
 
-***
+---
 
 <!-- Disclaimer -->
 <div align="left">
@@ -25,36 +26,35 @@ use specialized implementations of these algorithms and structures.<br/>
 Note: API stability is not guaranteed.
 </div>
 
-***
+---
 
 ## Index of algo topics
 
-* [Asymptotic (Big O notation)](./asymptotics/Asymptotics.md)
-* [Data structures](./data_structures/INDEX.md)
-    * [Fixed size array](#FixedSizeArray)
-    * [Dynamic array (vector)](#DynamicArray)
-    * [Stack](#Stack)
-    * [Dequeue](#Dequeue)
-    * [Queue](#Queue)
-    * [ArrayList](#ArrayList)
-    * [LinkedList](#LinkedList)
-    * [DoublyLinkedList](#DoublyLinkedList)
-    * [Hash Table](#HashTable)
-    * [Heap](./data_structures/heap/INDEX.md)
-    * [Binary Search Tree](#BinarySearchTree)
-    * [Practice](#Practice)
-    * [Summary Complexity Table](#SummaryComplexityTable)
-* [Algorithms & Techniques](#Algorithms)
-    * [Sorting and Searching](#SortingSearching)
-    * [Bitwise](#Bitwise)
-    * [Graphs](#Graphs)
-    * [Strings](#Graphs)
-    * [Greedy](#Greedy)
-    * [Dynamic Programming](#DP)
-* [LeetCode daily problems](./leetcode_daily/INDEX.md) 
+- [Asymptotic (Big O notation)](./asymptotics/Asymptotics.md)
+- [Data structures](./data_structures/INDEX.md)
+  - [Fixed size array](#FixedSizeArray)
+  - [Dynamic array (vector)](#DynamicArray)
+  - [Stack](#Stack)
+  - [Dequeue](#Dequeue)
+  - [Queue](#Queue)
+  - [ArrayList](#ArrayList)
+  - [LinkedList](#LinkedList)
+  - [DoublyLinkedList](#DoublyLinkedList)
+  - [Hash Table](#HashTable)
+  - [Heap](./data_structures/heap/INDEX.md)
+  - [Binary Search Tree](#BinarySearchTree)
+  - [Practice](#Practice)
+  - [Summary Complexity Table](#SummaryComplexityTable)
+- [Algorithms & Techniques](#Algorithms)
+  - [Sorting and Searching](#SortingSearching)
+  - [Bitwise](#Bitwise)
+  - [Graphs](#Graphs)
+  - [Strings](#Graphs)
+  - [Greedy](#Greedy)
+  - [Dynamic Programming](#DP)
+- [LeetCode daily problems](./leetcode_daily/INDEX.md)
 
-
-***
+---
 
 Before contributing to this repository, make sure to read our [Contribution Guidelines](CONTRIBUTING.md). You can look
 at the [issues with a "help wanted" label][help-wanted] for inspiration regarding what to implement.
@@ -69,6 +69,7 @@ Explanations of many of the algorithms can be found in the [wiki][explanation].
 The materials herein are all &copy; 2023 Alex Gavrilov.
 
 I am providing code and resources in this repository to you under an open-source license. Because this is my personal repository, the license you receive for my code and resources is from me and not my employer.
+
 <!-- Banner Image -->
 
 [banner]: https://github.com/AlexGavrilov939/AlgoExplorer/assets/5443983/9a385e3a-b494-44a7-917e-9a09677b0b62

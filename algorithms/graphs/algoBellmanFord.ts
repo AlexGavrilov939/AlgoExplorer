@@ -21,4 +21,5 @@
 
 // T.C.: O (E * K), E - number of edges, K - the input param
 // (+can be solved with BFS)
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const algoBellmanFord = () => {};

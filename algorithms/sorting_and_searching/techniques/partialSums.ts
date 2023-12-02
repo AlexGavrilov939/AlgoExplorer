@@ -3,4 +3,5 @@
 // - Not applicable if the array is mutable
 // - Can be adapted for 2D arrays
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const calc = () => {};

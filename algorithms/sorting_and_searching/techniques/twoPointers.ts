@@ -10,11 +10,12 @@ class ListNode {
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function middleNode(head: ListNode | null): ListNode | null {
-  let fp: ListNode = head;
+  let fp: ListNode | null = head;
   while (head?.next) {
     head = head.next.next;
-    fp = fp.next;
+    fp = fp!.next;
   }
 
   return fp;

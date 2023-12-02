@@ -3,4 +3,5 @@
 // Main idea - optimize Dikstra in such a way that it doesn't visit far verticies
 
 // A*
-const algoAstar = () => {};
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const algoAStar = () => {};

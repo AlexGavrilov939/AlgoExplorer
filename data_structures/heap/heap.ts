@@ -1,4 +1,4 @@
-class Heap {
+export class Heap {
   private readonly heap: number[] = [];
   private readonly comparator: (a: number, b: number) => boolean;
 
@@ -21,13 +21,13 @@ class Heap {
     const valueToRemove = this.heap.pop();
     this._siftDown(0, this.size() - 1, this.heap);
 
-    return valueToRemove;
+    return valueToRemove as number;
   };
 
   delete = (val: number): boolean => {
     const index = this.heap.indexOf(val);
     if (index !== -1) {
-      const bottom = this.heap.pop();
+      const bottom = this.heap.pop() as number;
       if (index !== this.heap.length) {
         this.heap[index] = bottom;
         if (this.comparator(bottom, val)) {
@@ -96,11 +96,6 @@ class Heap {
   };
 }
 
-const minHeapComparator = (a: number, b: number) => a < b;
+export const minHeapComparator = (a: number, b: number) => a < b;
 
-const maxHeapComparator = (a: number, b: number) => a > b;
-
-const minHeap = new Heap([4, 1, 2, 7, 8], minHeapComparator);
-const maxHeap = new Heap([4, 1, 2, 7, 8], maxHeapComparator);
-console.log("minHeap_peek", minHeap.peek());
-console.log("maxHeap_peek", maxHeap.peek());
+export const maxHeapComparator = (a: number, b: number) => a > b;

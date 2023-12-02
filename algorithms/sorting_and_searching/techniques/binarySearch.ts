@@ -7,9 +7,9 @@ const binarySearch = (sortedArr: number[], target: number): number => {
   let end = sortedArr.length - 1;
 
   while (start <= end) {
-    let mid: number = Math.floor((start + end) / 2);
+    const mid: number = Math.floor((start + end) / 2);
     if (sortedArr[mid] == target) return mid;
-    else if (sortedArr[mid] < target) start = mid + 1;
+    if (sortedArr[mid] < target) start = mid + 1;
     else end = mid - 1;
   }
 
@@ -18,4 +18,4 @@ const binarySearch = (sortedArr: number[], target: number): number => {
 
 const nums = [3, 2, 4, 6, 10, 7, 8, 9, 1, 5];
 nums.sort((a, b) => a - b);
-console.log("binarySearch_result:", binarySearch(nums, 4));
+console.log('binarySearch_result:', binarySearch(nums, 4));

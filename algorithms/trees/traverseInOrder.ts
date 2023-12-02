@@ -1,11 +1,9 @@
-import { TreeNode } from "../../data_structures/treeNode";
+import { TreeNode } from '../../data_structures/treeNode';
 
 // Recursive approach T.C: O(n), S.C: O(n)
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function inorderTraversalRecursive(root: TreeNode | null): number[] {
-  const dfsInOrder = (
-    node: TreeNode | null,
-    stack: number[] = []
-  ): number[] => {
+  const dfsInOrder = (node: TreeNode | null, stack: number[] = []): number[] => {
     if (node) {
       node.left && dfsInOrder(node.left, stack);
       stack.push(node.val);
@@ -18,10 +16,11 @@ function inorderTraversalRecursive(root: TreeNode | null): number[] {
 }
 
 // Iterative approach T.C: O(n), S.C: O(n)
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function inorderTraversalIterative(root: TreeNode | null): number[] {
   if (!root) return [];
 
-  let head: TreeNode = root;
+  let head: TreeNode | null = root;
   const stack: TreeNode[] = [];
   const traversed: number[] = [];
   while (stack.length > 0 || head) {
@@ -29,7 +28,7 @@ function inorderTraversalIterative(root: TreeNode | null): number[] {
       stack.push(head);
       head = head.left;
     }
-    const node: TreeNode = stack.pop();
+    const node: TreeNode = stack.pop() as TreeNode;
     traversed.push(node.val);
     head = node.right;
   }

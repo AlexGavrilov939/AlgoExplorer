@@ -15,6 +15,7 @@
 // 1 <= k <= arr.length
 // 0 <= threshold <= 104
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function numOfSubarrays(arr: number[], k: number, threshold: number): number {
   let result: number = 0;
   let sum: number = 0;
@@ -53,6 +54,7 @@ function numOfSubarrays(arr: number[], k: number, threshold: number): number {
 // 2 <= nums.length <= 105;
 // 1 <= nums[i], minK, maxK <= 106;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function countSubarrays(nums: number[], minK: number, maxK: number): number {
   let l: number = -1;
   let min: number = -1;

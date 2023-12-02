@@ -8,14 +8,10 @@ const quickSort = (nums: number[]): number[] => {
   return nums;
 };
 
-const quickSortHelper = (
-  nums: number[],
-  startIdx: number,
-  endIdx: number
-): number[] => {
+const quickSortHelper = (nums: number[], startIdx: number, endIdx: number): number[] => {
   if (startIdx >= endIdx) return;
 
-  let pivotIdx: number = startIdx;
+  const pivotIdx: number = startIdx;
   let leftIdx: number = startIdx + 1;
   let rightIdx: number = endIdx;
 
@@ -45,12 +41,13 @@ const quickSortHelper = (
 };
 
 // Just for understanding
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const quickSortEasyImplementation = (nums: number[]): number[] => {
   if (nums.length <= 1) return nums;
 
   // Choose pivot point x, split array into three parts: <x, =x, >x. Recursively sort <x and >x parts.
   // If pivot point is random then expected complexity is O(n * log(n))
-  let pivot: number = nums[0];
+  const pivot: number = nums[0];
   const leftArr: number[] = [];
   const rightArr: number[] = [];
 
@@ -65,4 +62,4 @@ const quickSortEasyImplementation = (nums: number[]): number[] => {
   return [...quickSort(leftArr), pivot, ...quickSort(rightArr)];
 };
 
-console.log("quickSort_result:", quickSort([3, 2, 4, 6, 10, 7, 8, 9, 1, 5]));
+console.log('quickSort_result:', quickSort([3, 2, 4, 6, 10, 7, 8, 9, 1, 5]));

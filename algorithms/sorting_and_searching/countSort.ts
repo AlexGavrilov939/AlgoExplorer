@@ -1,11 +1,7 @@
 // O(n + k)
 // Pros: linear complexity
 // Cons: Only for small integers, requires additional space
-const countSort = (
-  nums: number[],
-  min: number = 0,
-  max: number = nums.length
-): number[] => {
+const countSort = (nums: number[], min: number = 0, max: number = nums.length): number[] => {
   const count: number[] = [];
   for (let i = min; i <= max; i++) {
     count[i] = 0;
@@ -36,7 +32,7 @@ const count = [];
 for (let i = 0; i < input.length; i++) {
   count[input[i]] = (count[input[i]] ?? 0) + 1;
 }
-console.log("count", count);
+console.log('count', count);
 let j = 0;
 for (let i = 0; i < input.length; i++) {
   while (count[input[i]] && count[input[i]] > 0) {
@@ -45,6 +41,6 @@ for (let i = 0; i < input.length; i++) {
   }
 }
 
-console.log("input", input);
+console.log('input', input);
 
-console.log("countSort_result:", countSort([-3, 3, 2, 4, 7, 2]));
+console.log('countSort_result:', countSort([-3, 3, 2, 4, 7, 2]));
