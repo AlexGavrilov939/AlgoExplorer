@@ -1,4 +1,4 @@
-# Check If Two String Arrays are Equivalent
+# [1662. Check If Two String Arrays are Equivalent](https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/)
 
 ### <span style="color:rgb(0, 184, 163)">Easy</span>
 
