@@ -40,13 +40,15 @@ A crucial aspect is that any program stores variables in free memory slots or se
 Accessing a memory slot is a super-fast operation, denoted as O(1). In summary, consider memory as a bounded canvas of slots within a computer, capable of storing data. However, it's essential to note that running out of memory is a possibility.
 
 #### How the list is stored in memory
-![IMG_0020.PNG](..%2F..%2F..%2F..%2F..%2FUsers%2Falexgavrilov%2FDownloads%2FIMG_0020.PNG)
+![IMG_0020](https://github.com/AlexGavrilov939/AlgoExplorer/assets/5443983/ac348eb2-7b84-4f90-a7ae-ee537bc68e9e)
+
 
 #### How the string is stored in memory
-![IMG_0021.PNG](..%2F..%2F..%2F..%2F..%2FUsers%2Falexgavrilov%2FDownloads%2FIMG_0021.PNG)
+![IMG_0021](https://github.com/AlexGavrilov939/AlgoExplorer/assets/5443983/a4230c5f-3368-425a-9f5f-321632928970)
+
 
 #### How the pointer is stored in memory
-![IMG_0022.PNG](..%2F..%2F..%2F..%2F..%2FUsers%2Falexgavrilov%2FDownloads%2FIMG_0022.PNG)
+![IMG_0022](https://github.com/AlexGavrilov939/AlgoExplorer/assets/5443983/d93cf7f4-5a68-47b9-b6cb-a7a5d792c562)
 
 ## Big O Notation
 
