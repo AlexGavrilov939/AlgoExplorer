@@ -81,7 +81,10 @@ TBD
 TBD
 
 #### Some common big O times
+![1650357901lkH1xKTytK](https://github.com/AlexGavrilov939/AlgoExplorer/assets/5443983/031f9916-4c56-4024-a34a-bc6024cbd40e)
 
-#### Data structures times
+
+#### Data structures big O times
+![1650358110m7fPqMdxs5 copy](https://github.com/AlexGavrilov939/AlgoExplorer/assets/5443983/b780ddb6-694e-49c4-a10c-c036d45e470e)
 
 ## Exercises
