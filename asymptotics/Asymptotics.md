@@ -10,7 +10,7 @@
     - [Log N runtimes](#log-n-runtimes)
     - [Recursive runtimes](#recursive-runtimes)
     - [Some common big O times](#some-common-big-o-times)
-    - [Data structures times](#data-structures-times)
+    - [Data structures times](#data-structures-big-o-times)
 - [Exercises](#exercises)
 
 ## Motivation
@@ -90,3 +90,102 @@ TBD
 ![1650358110m7fPqMdxs5 copy](https://github.com/AlexGavrilov939/AlgoExplorer/assets/5443983/b780ddb6-694e-49c4-a10c-c036d45e470e)
 
 ## Exercises
+
+#### Problem 1
+```js
+function foo(arr: number[]) {
+  let sum: number = 0;
+  let product = 1;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  for (let i = 0; i < arr.length; i++) {
+    product *= arr[i];
+  }
+  return sum + product;
+}
+```
+> It will take TC: O(n). Twice iteration doesn't matter
+
+#### Problem 2
+```js
+function printPairs(arr: number[]) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      console.log(`${i}-${j}`);
+    }
+  }
+}
+```
+> It will take TC: O(n^2).
+
+#### Problem 3
+```js
+function printUnorderedPairs(arr: number[]) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      console.log(`${i}-${j}`);
+    }
+  }
+}
+```
+> It will take TC: O(n^2).
+
+#### Problem 4
+```js
+function foo(N: number, M: number) {
+  let a = 0, b = 0;
+  for (i = 0; i < N; i++) {
+    a = a + Math.random();
+  }
+  for (j = 0; j < M; j++) {
+    b = b + Math.random();
+  }
+
+  return a + b;
+}
+```
+> TC: O(N + M).
+N and M - different variables => we have traverses of different lengths
+
+
+#### Problem 5
+```js
+function foo() {
+  let a = 0;
+  for (i = 0; i < N; i++) {
+    for (j = N; j > i; j--) {
+      a = a + i + j;
+    }
+  }
+  
+  return a;
+}
+```
+> TC: O(N^2).
+
+```
+The above code runs total no of times
+= N + (N – 1) + (N – 2) + … 1 + 0
+= N * (N + 1) / 2
+= 1/2 * N^2 + 1/2 * N
+O(N^2) times.
+```
+
+#### Problem 6
+```js
+function foo() {
+  let i = 0;
+  let j = 0;
+  let k = 0;
+  for (i = Math.floor(n / 2); i <= n; i++) {
+    for (j = 2; j <= n; j = j * 2) {
+      k = k + Math.floor(n / 2);
+    }
+  }
+  return;
+}
+```
+> TC: (N * LogN). i runs for n / 2 steps, j would run for O(LogN) steps => O(N / 2 * LogN) => O(N * LogN)
+
+#### Problem 7
