@@ -53,6 +53,9 @@ Note: API stability is not guaranteed.
   - [Greedy](#Greedy)
   - [Dynamic Programming](#DP)
 - [Principal Tasks](./principal_tasks/INDEX.md)
+  - [Design](./principal_tasks/INDEX.md#design)
+    - [[M] LRU Cache](./principal_tasks/146.%20LRU%20Cache%20/PROBLEM.md)
+    - [[H] LFU Cache](./principal_tasks/460.%20LFU%20Cache/PROBLEM.md)
 - [LeetCode daily problems](./leetcode_daily/INDEX.md)
 
 ---
