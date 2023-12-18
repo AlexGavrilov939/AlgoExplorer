@@ -52,6 +52,7 @@ Note: API stability is not guaranteed.
   - [Strings](#Graphs)
   - [Greedy](#Greedy)
   - [Dynamic Programming](#DP)
+- [Principal Tasks](./principal_tasks/INDEX.md)
 - [LeetCode daily problems](./leetcode_daily/INDEX.md)
 
 ---

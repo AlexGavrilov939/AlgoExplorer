@@ -1,4 +1,4 @@
-# [1662. Check If Two String Arrays are Equivalent](https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/)
+# [1913. Maximum Product Difference Between Two Pairs](https://leetcode.com/problems/maximum-product-difference-between-two-pairs/)
 
 ### <span style="color:rgb(0, 184, 163)">Easy</span>
 
