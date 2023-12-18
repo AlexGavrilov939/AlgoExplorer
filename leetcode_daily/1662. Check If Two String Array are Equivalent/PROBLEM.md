@@ -4,41 +4,38 @@
 
 ### Description
 
-Given two string arrays `word1` and `word2`, return `true` if the two arrays represent the same string, and `false` otherwise.
-A string is represented by an array if the array elements concatenated in order forms the string.
+The product difference between two pairs `(a, b)` and `(c, d)` is defined as `(a * b) - (c * d)`.
+For example, the product difference between `(5, 6)` and `(2, 7)` is calculated as:
+`(5 * 6) - (2 * 7) = 16`
+
+Given an integer array `nums`, the task is to choose four distinct indices `w, x, y, and z` such that the **product difference** 
+between pairs `(nums[w], nums[x])` and `(nums[y], nums[z])` is maximized.
+
+Return the maximum such product difference.
 
 #### Example 1
 
 ```plaintext
-Input: word1 = ["ab", "c"], word2 = ["a", "bc"]
-Output: true
-Explanation:
-word1 represents string "ab" + "c" -> "abc"
-word2 represents string "a" + "bc" -> "abc"
-The strings are the same, so return true.
+Input: nums = [5,6,2,7,4]
+Output: 34
+Explanation: We can choose indices 1 and 3 for the first pair (6, 7) and indices 2 and 4 for the second pair (2, 4).
+The product difference is (6 * 7) - (2 * 4) = 34.
 ```
 
 #### Example 2
 
 ```plaintext
-Input: word1 = ["a", "cb"], word2 = ["ab", "c"]
-Output: false
-```
-
-#### Example 3
-
-```plaintext
-Input: word1 = ["abc", "d", "defg"], word2 = ["abcddefg"]
-Output: true
+Input: nums = [4,2,5,9,7,4,8]
+Output: 64
+Explanation: We can choose indices 3 and 6 for the first pair (9, 8) and indices 1 and 5 for the second pair (2, 4).
+The product difference is (9 * 8) - (2 * 4) = 64.
 ```
 
 #### Constraints:
 
 ```plaintext
-1 <= word1.length, word2.length <= 103
-1 <= word1[i].length, word2[i].length <= 103
-1 <= sum(word1[i].length), sum(word2[i].length) <= 103
-word1[i] and word2[i] consist of lowercase letters.
+4 <= nums.length <= 104
+1 <= nums[i] <= 104
 ```
 
 ### [<span style='color: rgb(44, 187, 93)'>Solution</span>](./solution.ts)

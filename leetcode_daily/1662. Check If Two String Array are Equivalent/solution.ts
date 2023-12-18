@@ -1,31 +1,33 @@
 // TC: O(n), SC: O(1)
-export function arrayStringsAreEqual(word1: string[], word2: string[]): boolean {
-  let w1p: number = 0;
-  let w2p: number = 0;
-  let s1p: number = 0;
-  let s2p: number = 0;
+export function maxProductDifference(nums: number[]): number {
+  let x = 0;
+  let y = 0;
+  let w = Number.MAX_VALUE;
+  let z = Number.MAX_VALUE;
 
-  while (w1p < word1.length && w2p < word2.length) {
-    if (word1[w1p].charAt(s1p++) !== word2[w2p].charAt(s2p++)) {
-      return false;
+  for (const num of nums) {
+    if (num > x) {
+      y = x;
+      x = num;
+    } else {
+      y = Math.max(y, num);
     }
-    if (s1p === word1[w1p].length) {
-      w1p++;
-      s1p = 0;
-    }
-    if (s2p === word2[w2p].length) {
-      w2p++;
-      s2p = 0;
+
+    if (num < z) {
+      w = z;
+      z = num;
+    } else {
+      w = Math.min(w, num);
     }
   }
 
-  return w1p === word1.length && w2p === word2.length;
+  return x * y - w * z;
 }
 
-// TC: O(n), SC: O(n)
-export function arrayStringsAreEqualNaive(word1: string[], word2: string[]): boolean {
-  const str1 = word1.join('');
-  const str2 = word2.join('');
+// TC: O(n log n), SC: O(1)
+export function maxProductDifferenceSort(nums: number[]): number {
+  const len: number = nums.length;
+  nums.sort((a, b) => a - b);
 
-  return str1 == str2;
+  return nums[len - 1] * nums[len - 2] - nums[0] * nums[1];
 }

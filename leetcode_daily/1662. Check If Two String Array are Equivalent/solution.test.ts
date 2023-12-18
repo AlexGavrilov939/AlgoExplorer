@@ -1,47 +1,43 @@
-import { arrayStringsAreEqual, arrayStringsAreEqualNaive } from './solution';
+import { maxProductDifference, maxProductDifferenceSort } from './solution';
 import { measureExecutionTime } from '../../utils/performance';
 
 const testCases = [
   {
-    word1: ['ab', 'c'],
-    word2: ['a', 'bc'],
-    result: true,
+    nums: [5, 6, 2, 7, 4],
+    result: 34,
   },
   {
-    word1: ['ab', 'c'],
-    word2: ['a', 'bc'],
-    result: true,
+    nums: [4, 2, 5, 9, 7, 4, 8],
+    result: 64,
   },
   {
-    word1: ['a', 'cb'],
-    word2: ['ab', 'c'],
-    result: false,
+    nums: [1, 6, 7, 5, 2, 4, 10, 6, 4],
+    result: 68,
   },
   {
-    word1: ['abc', 'd', 'defg'],
-    word2: ['abcddefg'],
-    result: true,
+    nums: [8, 3, 5, 7],
+    result: 41,
   },
 ];
 
-describe('arrayStringsAreEqual', () => {
+describe('maxProductDifference', () => {
   const elapsedTime = measureExecutionTime(() => {
-    for (const { word1, word2, result } of testCases) {
+    for (const { nums, result } of testCases) {
       it(`should return ${result} for equal string arrays`, () => {
-        expect(arrayStringsAreEqual(word1, word2)).toBe(result);
+        expect(maxProductDifference(nums)).toBe(result);
       });
     }
   });
-  console.log(`arrayStringsAreEqual execution time: ${elapsedTime} ms.`);
+  console.log(`maxProductDifference execution time: ${elapsedTime} ms.`);
 });
 
-describe('arrayStringsAreEqualNaive', () => {
+describe('maxProductDifferenceSort', () => {
   const elapsedTime = measureExecutionTime(() => {
-    for (const { word1, word2, result } of testCases) {
+    for (const { nums, result } of testCases) {
       it(`should return ${result} for equal string arrays`, () => {
-        expect(arrayStringsAreEqualNaive(word1, word2)).toBe(result);
+        expect(maxProductDifferenceSort(nums)).toBe(result);
       });
     }
   });
-  console.log(`arrayStringsAreEqualNaive execution time: ${elapsedTime} ms.`);
+  console.log(`maxProductDifferenceSort execution time: ${elapsedTime} ms.`);
 });
