@@ -6,10 +6,12 @@
 An **image smoother** is a filter of the size `3 x 3` that can be applied to each cell of an image by rounding down
 the average of the cell and the eight surrounding cells (i.e., the average of the nine cells in the blue smoother). If one or more of the surrounding cells of a cell is not present, we do not consider it in the average (i.e., the average of the four cells in the red smoother).
 
+![smoother-grid](https://github.com/AlexGavrilov939/AlgoExplorer/assets/5443983/230125e1-bf1d-458b-aca6-191a1e1bb3c1)
 
 Given an `m x n` integer matrix `img` representing the grayscale of an image, return the image after applying the smoother on each cell of it.
 
 #### Example 1
+![smooth-grid](https://github.com/AlexGavrilov939/AlgoExplorer/assets/5443983/7f787b55-bf78-440b-a8fc-8a79e6599da4)
 
 ```plaintext
 Input: img = [[1,1,1],[1,0,1],[1,1,1]]
@@ -21,6 +23,7 @@ For the point (1,1): floor(8/9) = floor(0.88888889) = 0
 ```
 
 #### Example 2
+![smooth2-grid](https://github.com/AlexGavrilov939/AlgoExplorer/assets/5443983/59f7f1d6-81a3-4408-8329-869f0498fdaa)
 
 ```plaintext
 Input: img = [[100,200,100],[200,50,200],[100,200,100]]
