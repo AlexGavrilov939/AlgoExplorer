@@ -1,4 +1,4 @@
-# [661. Image Smoother](https://leetcode.com/problems/image-smoother:target="_blank)
+# [661. Image Smoother](https://leetcode.com/problems/image-smoother)
 
 ### <span style="color:rgb(0, 184, 163)">Easy</span>
 
