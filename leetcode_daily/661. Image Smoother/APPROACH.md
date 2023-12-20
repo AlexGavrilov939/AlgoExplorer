@@ -9,7 +9,7 @@ Assume two independent numbers, `p` and `r`. Define another number `Y` as `Y = p
 ### Choosing `X`
 
 - `r` (remainder) ranges from 0 to X-1.
-- Constraints: 0 <= img[i][j] <= 255.
+- Constraints: 0 <= img`[i][j]` <= 255.
 - To limit `r` to 255, choose `X` as 256.
 
 ### Algorithm
