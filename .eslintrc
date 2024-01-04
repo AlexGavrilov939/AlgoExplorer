@@ -24,6 +24,7 @@
     "no-unused-expressions": "off",
     "no-constant-condition": "off",
     "no-continue": "off",
+    "guard-for-in": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
