@@ -56,6 +56,7 @@ Note: API stability is not guaranteed.
   - [Design](./principal_tasks/INDEX.md#design)
     - [[M] LRU Cache](./principal_tasks/146.%20LRU%20Cache%20/PROBLEM.md)
     - [[H] LFU Cache](./principal_tasks/460.%20LFU%20Cache/PROBLEM.md)
+    - [[H] In-Memory FileSystem](./principal_tasks/588.%20Design%20In-Memory%20File%20System/PROBLEM.md)
 - [LeetCode daily problems](./leetcode_daily/INDEX.md)
 
 ---
