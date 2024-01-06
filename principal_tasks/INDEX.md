@@ -1,4 +1,7 @@
 ## Index of Principal tasks
+
+### Graphs
+
 ### Design
 - [M] [LRU Cache](./146.%20LRU%20Cache%20/PROBLEM.md) 
 - [H] [LFU Cache](./460.%20LFU%20Cache/PROBLEM.md)
