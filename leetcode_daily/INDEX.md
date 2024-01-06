@@ -1,5 +1,6 @@
 # LeetCode Daily
 
+- [1235. Maximum Profit in Job Scheduling](./1235.%20Maximum%20Profit%20in%20Job%20Scheduling%20/PROBLEM.md)
 - [300. Longest Increasing Subsequence](./300.%20Longest%20Increasing%20Subsequence%20/PROBLEM.md)
 - [2870. Minimum Number of Operations to Make Array Empty](./2870.%20Minimum%20Number%20of%20Operations%20to%20Make%20Array%20Empty%20/PROBLEM.md)
 - [2706. Buy Two Chocolates](./2706.%20Buy%20Two%20Chocolates%20/PROBLEM.md)
