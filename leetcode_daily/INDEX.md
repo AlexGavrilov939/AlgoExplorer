@@ -1,5 +1,6 @@
 # LeetCode Daily
 
+- [872. Leaf-Similar Trees](./872.%20Leaf-Similar%20Trees%20/PROBLEM.md)
 - [938. Range Sum of BST](./938.%20Range%20Sum%20of%20BST%20/PROBLEM.md)
 - [446. Arithmetic Slices II - Subsequence](./446.%20Arithmetic%20Slices%20II%20-%20Subsequence%20/PROBLEM.md)
 - [1235. Maximum Profit in Job Scheduling](./1235.%20Maximum%20Profit%20in%20Job%20Scheduling%20/PROBLEM.md)
