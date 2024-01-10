@@ -46,7 +46,7 @@ And that's it! By the end of our walk, we've figured out the farthest point from
       - Our step count goes negative (`depth = min(leftDepth, rightDepth) - 1`) to signal that the special spot is somewhere close.
 
 6. ### 🗺️ The Big Picture:
-   - We start our adventure with `traverse(root, start)`.
+   - We start our adventure with `dfs(root, start)`.
    - At the end, we share the story of our farthest discovery from our special spot by showing our `maxDistance` notebook.
 
 And there you have it! A fun and adventurous way to explore our tree park and find the farthest point from our special spot. Happy exploring! 🌳🚶‍♂️✨
