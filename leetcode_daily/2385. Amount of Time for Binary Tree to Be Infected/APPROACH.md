@@ -22,10 +22,6 @@ And that's it! By the end of our walk, we've figured out the farthest point from
 
 ### Algorithm
 
----
-
-## 🚀 The Park Explorer Algorithm 🚀
-
 1. ### 🌲 Each New Tree Spot:
    - At every new tree (root), we start with a step count `depth = 0`.
    - If we find a spot with no more trees (`root == null`), we just mark `depth = 0` and take a break.
