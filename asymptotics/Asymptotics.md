@@ -3,15 +3,26 @@
 - [Motivation](#motivation)
 - [Memory](#memory)
 - [Big O](#big-o-notation)
-- [Space complexity](#space-complexity)
-- [Time complexity](#time-complexity)
+- [Time complexity](#time-complexity-computational-complexity)
     - [Drop the constants](#drop-the-constants)
-    - [Drop the constants](#drop-the-non-dominant-terms)
+    - [Drop the non-dominant terms](#drop-the-non-dominant-terms)
+    - [Amortized time](#amortized-time)
     - [Log N runtimes](#log-n-runtimes)
     - [Recursive runtimes](#recursive-runtimes)
-    - [Some common big O times](#some-common-big-o-times)
-    - [Data structures times](#data-structures-big-o-times)
+- [Space complexity](#space-complexity-spatial-complexity)
+- [Common Big O times](#common-big-o-times)
+- [Data structures Big O times](#data-structures-big-o-times)
+- [Trade Offs](#trade-offs)
 - [Exercises](#exercises)
+
+Big O helps us understand how fast algorithms run.
+It's like a filter that only keeps what's important about how long a function will take with `n` items.
+So, if a function has a big difference in run time with more data, like from a quick 300 milliseconds to a slow 30 seconds, that's what matters.
+
+Imagine an equation `3x² + x + 1`. If `x` is 5, the first part is the biggest (75), and the rest (5 and 1) are small.
+When `x` is huge, like 5 million, the first part is super big (75 trillion!) and the others barely count.
+So in `Big O`, we just focus on the big part, which for this would be `O(n²)`.
+This means for `n` items, the time it takes goes up by `n^2`. This is how we simplify algorithms to see how they scale up.
 
 ## Motivation
 
@@ -59,35 +70,127 @@ Academics use big 0, big &#920; (theta), and big &#937; (omega) to describe runt
 - **&#920; (big omega)** - describes a lower bound on the time.
 - **&#920; (big theta)** - means both O and &#920; - gives a tight bound on runtime.
 
-## Space complexity
-TBD
-
-## Time complexity
+## Time complexity (Computational complexity)
 
 For the interviews usually we should use O (big O) only.
 But actually we can describe our runtime for the function in 3 different ways.
 Consider **Quick sort** algorithm:
-- **Best case**. If elements are equal then quick sort on average traverse an array only once => O(n)
-- **Worse case**. If we get unlucky and the pivot is repeatedly the biggest element in the array we will traverse it O(N^2) times
-- **Expected case**. In average case we can expect a runtime of O(N logN)
+- **Best case**. If elements are equal then quick sort on average traverse an array only once => `O(n)`
+- **Worse case**. If we get unlucky and the pivot is repeatedly the biggest element in the array we will traverse it `O(N^2)` times
+- **Expected case**. In average case we can expect a runtime of `O(N logN)`
 
 #### Drop the constants
-TBD
-#### Drop the non-dominant terms
-TBD
-#### Amortized time
-TBD
-#### Log N runtimes
-TBD
-#### Recursive runtimes
-TBD
+An `O(N)` algorithm can run faster than an `O(1)` algorithm for certain inputs because Big O describes how runtime increases with input size.
+That's why we ignore constants in Big O notation.
+An algorithm that might look like `O(2N)` is actually `O(N)`.
+Some might think that labeling an algorithm with two separate for loops as `O(2N)` is more accurate,
+but it’s not; we’re really just looking at the trend of runtime growth, not precision in constants.
 
-#### Some common big O times
+#### Drop the non-dominant terms
+When dealing with terms like `O(N^2 + N)`, we drop the less significant terms.
+Since `O(N^2 + N^2)` simplifies to `O(N^2)`, the additional `N`, which grows more slowly,
+is not as important and we ignore it.
+
+So, `O(N^2 + N)` becomes `O(N^2)`, `O(N + log N)` simplifies to `O(N)`, and `O(5*2^N + 1000N^100)` simplifies to `O(2^N)`.
+The key is to focus on the term with the greatest impact on growth.
+
+#### Amortized time
+An **ArrayList** is like a flexible array that grows as you add more items.
+It resizes itself by creating a bigger array and moving items over when it gets full.
+
+Here's the cool part about its speed: Usually, adding an item is super quick, just `O(1)` time.
+But occasionally, when it's full and needs to resize, it takes longer, like `O(N)` time,
+because it has to shift all items to a new, bigger space.
+
+This slow step doesn't happen often.
+So, if you average out the quick and slow insertions, it still feels like each insertion is fast, at `O(1)` time.
+This average is what we call "**amortized time**." It's like the rare slow steps are spread out over the many fast ones, making the overall process pretty speedy!
+
+#### Log N runtimes
+`O(log N)` runtimes often come from processes where you keep splitting things in half.
+Take binary search as an example. You're searching for a number in a sorted list
+by repeatedly dividing the list into halves.
+
+Imagine you're looking for **9** in a list. First, you compare it to the middle number.
+If **9** is smaller, you look in the left half; if bigger, in the right half.
+Each step cuts your search area in half until you find **9** or have just one number left.
+
+The key is how many times you can divide your list in half before you're down to one. 
+For a list with **16** items, it goes like this: **16, 8, 4, 2, 1**.
+Each slash is a _division by two_.
+
+Flipping this process, if you start with **1** and keep doubling,
+how many times until you reach your original number? That's what the log in `O(log N)` is all
+about. If `2^k` equals your number (like **2^4 = 16**), then `k` is log base **2** of that number (**log2(16) = 4**).
+
+This is why binary search or finding an item in a balanced binary tree is `O(log N)`.
+Each comparison halves the number of possibilities, quickly narrowing down your search.
+
+#### Recursive runtimes
+```js
+const f = (n: number) => {
+  if (n <= 1) {
+    return 1;
+  }
+  
+  return f(n - 1) + f(n - 1);
+}
+```
+This code's runtime is `O(2^N)`, not the `O(N)` some might guess.
+It's a recursive function where each call generates two more calls until it reaches the base case (**n <= 1**).
+To understand the runtime, visualize a call tree for `f(4)`:
+
+- The first level has 1 call (`f(4)`).
+- The second level has 2 calls (two `f(3)`s).
+- The third level has 4 calls (`f(2)`s).
+- This doubling continues until the last level.
+
+Each level has twice as many calls as the previous, leading to **2^0, 2^1, 2^2... up to 2^N-1** at the **Nth** level.
+So, the total number of calls is the sum of these, which is `2^N - 1`, making the runtime `O(2^N)`.
+
+For space complexity, it's `O(N)` because at any point, the maximum depth of the call stack is `N`,
+representing the number of calls waiting to complete.
+
+## Space complexity (Spatial complexity)
+Space complexity is just like time complexity, but instead of measuring how long an algorithm takes,
+it measures how much memory it uses. Think of it like this:
+
+- If your algorithm needs a list with n items, that's `O(n)` space because you're using space for each item.
+- Need a grid or table (like a chessboard) that's `n` by `n`? That's `O(n^2)` space, as the space grows with both the rows and columns.
+
+Also, don't forget about the space used when you have functions calling themselves (recursion).
+Each time a function calls itself, it takes up a bit of memory.
+So, if a function calls itself n times, that's `O(n)` space being used up.
+This is because each call needs its own little memory spot to remember where it is and what it's doing.
+
+## Common Big O times
 ![1650357901lkH1xKTytK](https://github.com/AlexGavrilov939/AlgoExplorer/assets/5443983/031f9916-4c56-4024-a34a-bc6024cbd40e)
 
 
-#### Data structures big O times
+## Data structures Big O times
 ![1650358110m7fPqMdxs5 copy](https://github.com/AlexGavrilov939/AlgoExplorer/assets/5443983/b780ddb6-694e-49c4-a10c-c036d45e470e)
+
+## Trade Offs
+
+**Why Big O?** It's not about calculating the Big O for every function in your code.
+It's about the **mindset**.
+
+For example, realizing that nesting loops might be costly is part of this mindset.
+
+**Key Points:**
+
+1. **No Absolute Rules**: Every situation is unique. Big O is a **tool**, not a strict rulebook.
+2. **Variety of Good Choices**: Often, there are multiple good ways to approach a problem.
+3. **Details Can Be Important**: Sometimes, the small details (like coefficients in equations) matter, even though Big O overlooks them.
+4. **Broader Perspective**: Sometimes general efficiency isn't crucial, especially for functions that don't run frequently.
+5. **Readability and Maintainability**: Code is primarily for humans. It should be clear and maintainable.
+6. **Simplicity is Key**: Simple code is easier to understand and has fewer bugs.
+7. **Human Time is Valuable**: The time spent optimizing code is often more valuable than the computing time saved.
+8. **Avoid Premature Optimization**: Address performance issues when they actually arise.
+9. **Leverage Built-in Functions**: They are usually more optimized and reliable than custom solutions.
+
+Big O is about understanding potential efficiency issues, but it's just one aspect of writing effective code.
+Always consider the broader context and aim for clarity and maintainability.
 
 ## Exercises
 
@@ -188,4 +291,3 @@ function foo() {
 ```
 > TC: (N * LogN). i runs for n / 2 steps, j would run for O(LogN) steps => O(N / 2 * LogN) => O(N * LogN)
 
-#### Problem 7
